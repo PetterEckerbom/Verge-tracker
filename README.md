@@ -1,6 +1,6 @@
 # Verge Tracker
 ---
-This is a Simple app I built to test what you can use public APIs for, it thaought me a lot but is unfortunatly pretty useless as far superior apps are already on the market such as the mobile app [Delta](https://getdelta.io)
+This is a Simple app I built to test what you can use public APIs for, it thought me a lot but is unfortunatly pretty useless as far superior apps are already on the market such as the mobile app [Delta](https://getdelta.io)
 
 ---
 ### Try it!
