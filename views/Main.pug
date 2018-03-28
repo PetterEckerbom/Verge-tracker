@@ -1,0 +1,57 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=719px')
+    link(rel='stylesheet', media='screen and (min-width: 720px)', type='text/css', href='/generic.css')
+    link(rel='stylesheet', type='text/css', media='screen and (max-width: 720px )', href='/mobile.css')
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='theme-color', content='#ffffff')
+    title Verge-Tracker
+  body
+    //Imports bootstap etc.
+    script(src='https://code.jquery.com/jquery.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    script(src='/simple.js')
+    //To show that you can use the link directly it is displayed in top of screen.
+    div.alert.alert-success
+      p Use this link to get directly to this page: 
+        a.alert-link#link_href
+          b#link
+    //Simple bootstrap list with all the values calculated in app.js
+    ul.list-group
+      li.list-group-item 
+        p Price:   #{satoshi}
+      li.list-group-item 
+        p Price:   #{verge_price}
+      li.list-group-item 
+        p Quantity:  #{total_verge}
+      li.list-group-item 
+        p BTC value: #{total_value}
+      li.list-group-item 
+        p LTC value: #{total_LTC}
+      li.list-group-item 
+        p ETH value: #{total_ETH}
+      if (new_price)
+        li.list-group-item 
+          p Fiat value: #{currency_value}
+      else
+        li.list-group-item 
+          p Fiat value: #{USD_value}
+      if (change24h >= 0)
+        li.list-group-item 
+          p.green Net 24h: +#{change24h} #{type}
+      else
+        li.list-group-item 
+          p.red Net 24h:  #{change24h} #{type}
+    div.alert.alert-info.infobox
+      p Note: "Net 24h" does not take into account bitcoin fluctuation so accuracy may vary. <br> If this website is or has been useful to you <b>Consider donating</b> to help keep the server running<br>
+      p <b>XVG adress: <i class="alert-link"> DKvbVvsk5WTXCmTyGeiVitrM2w3dN97g7V</i></b><br>
+      p <b>LTC adress: <i class="alert-link"> LT2jVAJtoW8dCuddZ1UnW67R6oN2wUEqfL</i></b><br>
+      p <b>BTC adress: <i class="alert-link"> 1MvsktUWHnCqG2M6hSfpBwjZZWJJHvRXHA</i></b><br>
+      p Special Thanks to <a class="alert-link" href="https://www.binance.com">Binance</a> and <a class="alert-link" href="http://fixer.io">fixer.io</a> without their great APIs this tool would not have been possible

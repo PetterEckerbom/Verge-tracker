@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width')
+    //Imports the favicon
+    link(rel='apple-touch-icon', sizes='180x180', href='/apple-touch-icon.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    link(rel='mask-icon', href='/safari-pinned-tab.svg', color='#5bbad5')
+    meta(name='theme-color', content='#ffffff')
+    title Verge-Tracker
+    //Aport from bootstrap this styling is used for simple coloring and stuff
+    style.
+      body{
+        text-align: center;
+        padding:20px;
+      }
+      form{
+        background:skyblue;
+        padding:20px;
+        border-radius: 20px;
+        display: inline-block;
+      }
+      input{
+        text-align:center;
+      }
+  body
+    //Imports bootstrap aswell as jquery. Jquery is only imported to run bootstrap
+    script(src='https://code.jquery.com/jquery.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', rel='stylesheet', type='text/css')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js')
+    //Imports the code that generates the URL
+    script(src='/form.js')
+    //form that takes in the values and runs function generate() in submit.
+    form(onsubmit="generate(); return false;")
+      h1.display-1 Input desired Settings
+      div.form-group
+        label Preferred FIAT currency:
+        input.form-control#fiat(type="Text", placeholder='Examples: USD, EUR or GBP')
+        p Most currencies are supported but make sure you enter the right id for it. <br> If you misspell the id or enter a currency not supported it will default to USD. <br> (Use capital letters for the ID to make sure the API understands what you are looking for) 
+        label XVG Quantity:
+        input.form-control#XVG(type="number", min=0 , placeholder='How much are you hodling?')
+        p In order to calculate how much money you have, you need to put in how much XVG you own
+        input.btn.btn-primary(type="submit", value="Get breakdown!")
+    div(align='center')
+      h4  Website visits:  
+      //simple way to count website visits
+      a(href='http://www.simplehitcounter.com', target='_blank')
+      img(src='http://simplehitcounter.com/hit.php?uid=2330416&f=16777215&b=255', border='0', height='18', width='83', alt='web counter')
+      br
+      a(href='http://www.simplehitcounter.com', target='_blank', style='text-decoration:none;') web counter

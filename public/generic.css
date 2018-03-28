@@ -1,0 +1,38 @@
+*{
+        font-size:30px;
+      }
+      p{
+        text-align: center;
+      }
+      ul li:nth-child(odd) {
+        background-color: #ccc;
+      }
+	  #link{
+		word-wrap: break-word;
+	  }
+      .green{
+        color:#00d36e;
+        text-shadow: -1px 1px black;
+      }
+      .red{
+        color:red;
+        text-shadow: -1px 1px black;
+      }
+      .infobox p{
+        text-align: left;
+      }
+      .infobox p{
+        font-size:15px;
+      }
+      .infobox b{
+        font-size:15px;
+      }
+      .infobox i{
+        font-size:15px;
+      }
+      .infobox a{
+        font-size:15px;
+      }
+      .infobox{
+        line-height:19px;
+      }

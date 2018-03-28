@@ -1,0 +1,20 @@
+{
+  "name": "verge_tracker",
+  "version": "1.0.0",
+  "description": "Simple Application that let's you track your verge wallet value aswell based on the BINANCE web api, teh verge-blockchain.info api aswell as the fixer.io fiat converter API. Donations are appreciated, VERGE wallet address: DKvbVvsk5WTXCmTyGeiVitrM2w3dN97g7V",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Verge",
+    "XVG",
+    "Tracker"
+  ],
+  "author": "Hayttman",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.0-rc.4",
+    "request": "^2.83.0"
+  }
+}
